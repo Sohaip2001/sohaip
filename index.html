@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تطبيق الهيئة المستقلة للانتخاب</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>الهيئة المستقلة للانتخاب</h1>
+        </header>
+        
+        <!-- قسم تسجيل الدخول -->
+        <section id="login-section">
+            <h2>تسجيل الدخول</h2>
+            <form id="login-form">
+                <label for="national-id">الرقم الوطني:</label>
+                <input type="text" id="national-id" name="national-id" required>
+
+                <label for="password">كلمة السر:</label>
+                <input type="password" id="password" name="password" required>
+
+                <div class="captcha">
+                    <label for="captcha">أدخل النص التالي:</label>
+                    <input type="text" id="captcha" name="captcha" required>
+                    <p id="captcha-text">2024</p>
+                </div>
+
+                <button type="submit">تسجيل الدخول</button>
+                <p><a href="#" id="forgot-password">هل نسيت كلمة السر؟</a></p>
+            </form>
+        </section>
+
+        <!-- قسم المحتوى الرئيسي -->
+        <section id="main-content" class="hidden">
+            <nav>
+                <ul>
+                    <li><a href="#" id="vote-tab"><i class="fas fa-vote-yea"></i> التصويت</a></li>
+                    <li><a href="#" id="candidates-tab"><i class="fas fa-users"></i> التعرف على المرشحين</a></li>
+                    <li><a href="#" id="rules-tab"><i class="fas fa-gavel"></i> القوانين والتعليمات</a></li>
+                </ul>
+            </nav>
+
+            <!-- أقسام المحتوى -->
+            <section id="vote-section" class="hidden">
+                <h2>التصويت</h2>
+                <p>هنا يمكنك اختيار المرشح الذي تود التصويت له.</p>
+                <form id="vote-form">
+                    <label for="candidate">اختر مرشحًا:</label>
+                    <select id="candidate" name="candidate">
+                        <option value="1">مرشح 1</option>
+                        <option value="2">مرشح 2</option>
+                        <option value="3">مرشح 3</option>
+                    </select>
+                    <button type="submit">تأكيد التصويت</button>
+                </form>
+                <button id="back-to-main">العودة</button>
+            </section>
+
+            <section id="candidates-section" class="hidden">
+                <h2>التعرف على المرشحين</h2>
+                <p>هنا يمكنك الاطلاع على قائمة المرشحين المتاحين في الانتخابات.</p>
+                <ul>
+                    <li>مرشح 1: مؤهل ذو خبرة.</li>
+                    <li>مرشح 2: متخصص في الشؤون الاقتصادية.</li>
+                    <li>مرشح 3: خبير في مجال التعليم.</li>
+                </ul>
+                <button id="back-to-main">العودة</button>
+            </section>
+
+            <section id="rules-section" class="hidden">
+                <h2>القوانين والتعليمات</h2>
+                <p>تحدد القوانين والتعليمات المعمول بها كيفية إجراء الانتخابات وإجراءات التصويت.</p>
+                <ul>
+                    <li>التسجيل في الانتخابات يتم عبر الموقع الرسمي.</li>
+                    <li>يجب على الناخبين تقديم بطاقة هوية سارية.</li>
+                    <li>تُجرى الانتخابات في مراكز التصويت المعتمدة.</li>
+                </ul>
+                <button id="back-to-main">العودة</button>
+            </section>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
